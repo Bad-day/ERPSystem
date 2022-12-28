@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>소프트웨어공학 ERP구현</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="header">
+                <div class="logo">
+            <a href="{% url 'welcome' %}"><img src="{% static 'img/erp-system.jpg' %}" width="140" height="38"></a>
+        </div>
+            <div class="h-item">
+                <a href="{% url 'login' %}"><input type="submit" value="LogIn"></a>
+                <a href="{% url 'signup' %}"><input type="submit" value="SignUp"></a>
+            </div>
+        </div>
+
+        <div id="m-content">
+            <div class="m-body">
+                <h2>main_body</h2>
+                <h2>ERP</h2>
+                <h2>----main----</h2></br>
+            </div>
+        </div>
+
+        <div id="s-content">
+            <div class="s-body">
+                <h2>signup form</h2>
+                
+                {% block form %}
+            
+                {% endblock form %}
+                    
+        </div>
+        
+        <div id="footer">
+            <p>안양대학교 컴퓨터공학과 권용환</p>
+        </div>
+        </div>
+    </body>
+</html>

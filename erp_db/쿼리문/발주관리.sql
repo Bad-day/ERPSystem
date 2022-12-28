@@ -1,0 +1,2 @@
+SELECT product_name,brand_name as brand, product_code ,product_price=product_price*pro_sum as total_cost, if(pro_code=product_code and pro_stat="입고",pro_sum,0) as count, brand_tel, brand_account
+From product,sales,brand,product_s
